@@ -1,0 +1,31 @@
+{
+  "name": "tokens",
+  "version": "1.0.0",
+  "description": "Additional information about tokens on Radix, such as contacts, logos, team/lockup addresses.",
+  "main": "index.js",
+  "scripts": {
+    "gen-schema": "typescript-json-schema ./tsconfig.json Token --refs --aliasRefs --required --excludePrivate --out ./schemas/token.schema.json",
+    "validate-tokens": "ts-node src/validate-tokens.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radix-Live/tokens.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Radix-Live/tokens/issues"
+  },
+  "homepage": "https://github.com/Radix-Live/tokens#readme",
+  "dependencies": {
+    "json-schema-library": "^7.1.0",
+    "json5": "^2.2.1",
+    "typescript-json-schema": "^0.54.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}

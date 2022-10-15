@@ -1,0 +1,64 @@
+{
+  "name": "Radix",
+  "shortName": "Radix",
+  "aliases": [
+    "√"
+  ],
+  "website": "https://radixdlt.com",
+  "infoUrl": "https://tokens.radixdlt.com",
+  "description": "The Radix Public Network's native token.",
+  "shortDescription": "The Radix Public Network's native token.",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/radixdlt"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/radixdlt"
+    },
+    {
+      "type": "telegram",
+      "title": "Announcements",
+      "url": "https://t.me/RadixAnnouncements"
+    },
+    {
+      "type": "telegram",
+      "title": "Radix DLT Official",
+      "url": "https://t.me/radix_dlt"
+    },
+    {
+      "type": "discord",
+      "url": "https://discord.com/invite/WkB2USt"
+    },
+    {
+      "type": "facebook",
+      "url": "https://facebook.com/RadixDLT/"
+    },
+    {
+      "type": "youtube",
+      "url": "https://youtube.com/channel/UCWz_uLkOCrmSUnLAxSY4N5Q"
+    },
+    {
+      "type": "reddit",
+      "url": "https://reddit.com/r/Radix/"
+    },
+    {
+      "type": "medium",
+      "url": "https://medium.com/@radixdlt"
+    }
+  ],
+  "tags": [
+    "Layer 1"
+  ],
+  "maxSupply": 2.4e10,
+  "projectAccounts": [
+    {
+      "address": "rdx1qspavukv7ajyh330etfggsemzcje8ddkylm0jelj73h2j4k7y8rvfqcuvs3ed",
+      "title": "Stablecoin Reserve",
+      "tags": [
+        "foundation"
+      ],
+    }
+  ],
+}
