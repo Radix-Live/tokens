@@ -1,0 +1,37 @@
+{
+  "name": "XIDAR",
+  "aliases": [],
+  "website": "https://xidar.io",
+  "infoUrl": "https://xidar.io/ida",
+  "description": "XIDAR, resources to fully explore the Radix DLT",
+  "shortDescription": "XIDAR, resources to fully explore the Radix DLT",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/XIDAR_official"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/XIDAR_IDA"
+    },
+  ],
+  "tags": [
+    "defi",
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspnpyswejxxkyw6rzd28v6pc3ky0a034z8q3aa4ps9c4xg8hxm40zgd53v2x",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qsp8w6t22w3kc8mufacj0gmflfknu2z0waqq3xvaagy7wnlqgmtr0esp093gl",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    }
+  ],
+}
