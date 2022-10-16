@@ -1,0 +1,30 @@
+{
+  "name": "RadixUID",
+  "aliases": [],
+  "website": "https://radixuid.wordpress.com",
+  "infoUrl": "https://radixuid.wordpress.com/2022/08/11/3813/",
+  "description": "RadixUID Staking and DeFi",
+  "shortDescription": "RadixUID Staking and DeFi",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/bizwareint"
+    },
+    {
+      "type": "telegram",
+      "url": "https://t.me/Radix_CryptoBot"
+    },
+  ],
+  "tags": [
+    "stablecoin"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qsptzy05xhlsnukp3lpyd74ewkrsxk40c6ydsyqwaw06ehwwumtydusms9n2g",
+      "title": "",
+      "tags": [
+        "project"
+      ],
+    }
+  ],
+}
