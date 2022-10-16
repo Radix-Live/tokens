@@ -1,0 +1,29 @@
+{
+  "name": "Artistizen Shareholder Token",
+  "shortName": "Artistizen",
+  "aliases": [],
+  "website": "https://artistizen.com",
+  "infoUrl": "https://www.artistizen.com/tokenomics.html",
+  "description": "Holders are eligible for dividends from the Artistizen NFT Marketplace.",
+  "shortDescription": "Holders are eligible for dividends from the Artistizen NFT Marketplace.",
+  "links": [],
+  "tags": [
+    "yield",
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qsph592g2p27qvyvfqadj7v9rakskw7zl4zkpv4jymsqmdjmj9ja00qgva4cj",
+      "title": "Minting",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qsp5ndytugnhlhfgpp5s3wz8ynp4fapd2yk27zrdr0n3na0kyqqrydsew6c3w",
+      "title": "Seed Round 1",
+      "tags": [
+        "project"
+      ]
+    },
+  ],
+}
