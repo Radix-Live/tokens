@@ -1,0 +1,56 @@
+{
+  "name": "Astrolescent",
+  "aliases": [],
+  "website": "https://astrolescent.com",
+  "infoUrl": "https://astrolescent.com/tokenomics",
+  "description": "Official yield bearing and governance token of Astrolescent.",
+  "shortDescription": "Official yield bearing and governance token of Astrolescent.",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/astrolescent_official"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/Astrolescent"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/Astrolescent-Official"
+    },
+  ],
+  "tags": [
+    "yield",
+    "governance"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspk36sa6jyzuky0wvnwuutrkjvh88czzzc50flkj53rk6damdudpeg06fkgt",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspvu4dcs9spym4j40ev7q3fzrrjdr6l2jgaduaqz540zqzupkkedqc7t3q5h",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qsphpp4k2wu55zwjkhhxmqkjfvy4us438y6pgdu2e8wsuh0mqueq2esnqx2ta",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspmn96h4mh2lhudr64vgc5saycf77xelpwpgzrefylydrhtxzk2anggpcct2",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    }
+  ],
+}
