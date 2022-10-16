@@ -1,0 +1,35 @@
+{
+  "name": "VikingCoin",
+  "aliases": [],
+  "website": "https://www.stakenordic.com",
+  "infoUrl": "https://www.stakenordic.com/vikingCoin",
+  "description": "VikingCoin is a utility token for StakeNordic's different projects. It will give holders a revenue share from our NFT marketplace. It can also be used for fees and as payment on the NFT marketplace. There will be more use cases announced as our projects evolves.\n\n$VKC (VikingCoin) is currently distributed to stakers on www.stakenordic.com node as an initial launch campaign and to contribute to future funding of projects.",
+  "shortDescription": "VikingCoin is a utility token for StakeNordic's different projects.",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/stakenordic"
+    },
+    {
+      "type": "discord",
+      "url": "https://discord.com/invite/eNp58QGQmb"
+    },
+    {
+      "type": "telegram",
+      "url": "https://t.me/StakeNordic"
+    },
+  ],
+  "tags": [
+    "nft",
+    "yield"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qsp3ef4sty6a2l7y8c4hqgjs2ajjyffmxj8dcl4yl0rmnqle4z0qjjgfd50ue",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+  ],
+}
