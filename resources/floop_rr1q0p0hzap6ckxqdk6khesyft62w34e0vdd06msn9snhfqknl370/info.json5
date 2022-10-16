@@ -1,0 +1,31 @@
+{
+  "name": "Floop",
+  "aliases": [],
+  "website": "https://caviarnine.com",
+  "infoUrl": "https://caviarnine.com/#tokens",
+  "description": "Floop was one of the earliest tokens to be created on the Radix DLT network with only 1000 minted. There were a few airdrops where validator runners received 1 FLOOP and all wallets that had done a single transaction received 0.0999999999 FLOOP. We'll try and keep you in the floop...",
+  "shortDescription": "Flippity floppity floop",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/RaditXRD"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/CaviarNine"
+    },
+  ],
+  "tags": [
+    "defi",
+    "yield"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspv3xf6ds70mlf3eps3n8h2m7vd8mp9c93694ufv40tt6spad0dt2stamped",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+  ],
+}
