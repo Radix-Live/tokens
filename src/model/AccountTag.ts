@@ -16,7 +16,7 @@ export enum AccountTagEnum {
      */
     treasury,
     /**
-     * CEX or DEX
+     * CEX or DEX account (user funds)
      */
     exchange,
     /**

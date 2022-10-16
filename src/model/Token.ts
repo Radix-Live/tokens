@@ -17,7 +17,6 @@ export class Token {
     shortName?: string;
     /**
      * Aliases for search (optional)
-     * @minItems 1
      * @uniqueItems true
      * @items.minLength 1
      * @items.maxLength 63
