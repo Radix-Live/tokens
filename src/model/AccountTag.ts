@@ -23,6 +23,10 @@ export enum AccountTagEnum {
      * Bridge reserves
      */
     bridge,
+    /**
+     * None of the above
+     */
+    other,
 }
 
 export declare type AccountTag = keyof typeof AccountTagEnum;

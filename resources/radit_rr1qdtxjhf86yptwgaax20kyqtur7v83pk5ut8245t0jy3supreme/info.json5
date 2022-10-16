@@ -1,0 +1,32 @@
+{
+  "name": "Radit",
+  "aliases": [],
+  "website": "https://radit.io",
+  "infoUrl": "https://caviarnine.com/#tokens",
+  "description": "The official governance token of https://radit.io, a community owned board powered by Radix.\n\nRADIT was minted with a fixed supply of 100,000,000 tokens which 83% will be airdropped to radit.io users and stakers to CaviarNine nodes. The token was created with a special 'safe' ending supreme.",
+  "shortDescription": "The official governance token of radit.io, a community owned message board powered by Radix and made by CaviarNine",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/RaditXRD"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/RaditXRD"
+    },
+  ],
+  "tags": [
+    "governance",
+    "yield"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspckv29rmx9zy7n9fvxchwdazkzx9vuh6l373nm07smllpz7rcs8hgazette",
+      "title": "Radit",
+      "tags": [
+        "other"
+      ],
+      "circulating": true
+    }
+  ],
+}
