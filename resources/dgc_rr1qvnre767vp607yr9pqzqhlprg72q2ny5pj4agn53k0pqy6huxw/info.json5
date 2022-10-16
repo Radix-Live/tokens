@@ -1,0 +1,39 @@
+{
+  "name": "DogeCube",
+  "aliases": ["Doge³", "Doge3"],
+  "website": "https://www.dogecube.io",
+  "infoUrl": "https://www.dogecube.io/home#h.5x0oc1e12g5r",
+  "description": "DogeCube is the first RADIX memecoin, with an already well advanced distribution to its community members, CEX listings and its own NFT collection.\n\nLike Samoyed INU was the first memecoin on SOLANA, DogeCube is RADIX’s cutest ambassador and symbol of the RADIX ecosystem. Don’t hesitate to join it and let it be your guide in the RADIX crypto world.",
+  "shortDescription": "Doge³ Cerby - Doge but on roïds",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/DOGECUBE"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/Doge3_cerby"
+    },
+    {
+      "type": "instagram",
+      "url": "https://www.instagram.com/dogecube"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/DogeCube-io"
+    },
+  ],
+  "tags": [
+    "meme",
+    "index"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspkk9yjuh63n6nucj50naxmmu0n65wsa93rjx5xx0cy6xppx84s79ssdl35c",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+  ],
+}

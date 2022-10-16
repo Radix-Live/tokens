@@ -5,6 +5,7 @@ export enum LinkTypeEnum {
     discord,
     docs,
     facebook,
+    instagram,
     forum,
     github,
     medium,
