@@ -1,0 +1,90 @@
+{
+  "name": "Delphibets",
+  "aliases": [],
+  "website": "https://delphibets.com",
+  "infoUrl": "https://delphibets.com/#tokenomics",
+  "description": "Delphibets is the first prediction market exclusively on Radix DLT. With the launch of Babylon, Delphibets will provide an intuitive betting platform. You will then be able to bet on future events and compete with opposing bettors.",
+  "shortDescription": "Delphibets is the first prediction market and an intuitive betting platform exclusively on Radix DLT.",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/DELPHIBETS"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/delphibets?s=20&t=G3GqCckc-yVbKSfnun5RuQ"
+    },
+    {
+      "type": "reddit",
+      "url": "https://www.reddit.com/r/delphibets_com/"
+    },
+  ],
+  "tags": [
+    "prediction"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspkefsulsy0spvzgc94668aw5lv73wfv75mz6e8dclx035w9r5qtksp3t7fq",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspsy20cq56fxfwhump24fdtxmj0x28u2xavsjfyz2036tf20x5uryqyyttz0",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspl4ts7yenmqg8u9pzcpy3c44qjsl4scc90633kcej5zkmvz97mhdsytm05s",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspadlklntzjlza603uvjztj9efl4txz2efhz4uq20r88g4qdfk3nlq63rhg4",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspsn93agq3fcswsn9kd966vrnazwkgug20m7sq6xeyedemlxen5cxs2qdsut",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspx5r8j5w3e70gcgewfu7llf52a984rp5rau3asy6x7mnnkhmca3uca4krmx",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qsp2905k3q2dlnhmw0s56zdhv5cntjnkcm8pr74ljl88v9rf7yggtjcqn7m7j",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qsphs3xtmkmkywgkj5dt9wak07jkde5lxekxll9w3tgw88p7de6hkngsvyd8m",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "address": "rdx1qspd6ptcxv6uwwswv72wnyrmq6tlgzrged2r7uj360568wu9xqgzsqcyl3ss4",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+  ],
+}
