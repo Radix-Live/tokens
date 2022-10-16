@@ -26,5 +26,69 @@
         "project"
       ]
     },
+    {
+      "address": "rdx1qspn2ervq708p7suzs0nll5uzly84fvjfhfrhl3x547kawvehe0ltkcavswap",
+      "title": "CaviarPool",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
+    {
+      "address": "rdx1qspm0ylf4wwq9uratfhzae95u4fp2ckcdrd45agexnql7xs0vgnat4sandman",
+      "title": "CaviarSwap - LargeCaps",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
+    {
+      "address": "rdx1qspctktrvegp5dxlfzt62e90h5ktpue62afr9kkgk5e65hgqmveydcqvd8dex",
+      "title": "CaviarSwap - Dexpool",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
+    {
+      "address": "rdx1qspqnpv2s2pegecgk4ts38y9t7a23kekhm3lkr0j0v9hkd3lrsry2tcrackup",
+      "title": "CaviarSwap - Floop Pool",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
+    {
+      "address": "rdx1qsp4vmx0fmwwjjlnhdqug627lk7zr8ghrarzghy4knrpm0sj5ra7egsdphcat",
+      "title": "CaviarSwap - Ocibet Pool",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
+    {
+      "address": "rdx1qsptwrpzk8pwkha6axlw05ajhnqr6ewm0907hgsj6m7ls5j2efh8j5slender",
+      "title": "CaviarSwap - Deluxe Pool",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
+    {
+      "address": "rdx1qsp65zf32t6cmuv54yrfnwscwmgsrsgfehq2g8cltegkrhe4ylg6cqsdntwah",
+      "title": "CaviarSwap - Epic Pool",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
+    {
+      "address": "rdx1qspkyg5wazc9a7rhffhsgjvz2zqcxh99s9gan9guffyjgmnrf9v6ydstatues",
+      "title": "CaviarSwap - 100K Pool",
+      "tags": [
+        "exchange"
+      ],
+      "circulating": true
+    },
   ],
 }
