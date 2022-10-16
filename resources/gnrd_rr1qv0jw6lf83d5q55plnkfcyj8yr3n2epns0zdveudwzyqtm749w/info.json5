@@ -1,0 +1,34 @@
+{
+  "name": "Genesis Nerds",
+  "aliases": ["Nerds"],
+  "website": "https://nerdsrepublic.net",
+  "infoUrl": "https://nerdsrepublic.net/#mint",
+  "description": "First collection of unique avatars on the Radix DLT",
+  "shortDescription": "First collection of unique avatars on the Radix DLT",
+  "links": [
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/nerds_republic"
+    },
+    {
+      "type": "discord",
+      "url": "https://discord.gg/vuFPcaBGys"
+    },
+    {
+      "type": "telegram",
+      "url": "https://t.me/nerdsrepublic"
+    },
+  ],
+  "tags": [
+    "nft",
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspwy8ylazhuwa6tc97qc773g0tkmpm43gjh8zjfw5ys0f0a4w0euaqj8l9q3",
+      "title": "Nerds Republic ?",
+      "tags": [
+        "project"
+      ]
+    }
+  ],
+}
