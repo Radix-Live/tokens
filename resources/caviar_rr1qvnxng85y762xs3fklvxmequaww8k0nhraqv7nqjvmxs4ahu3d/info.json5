@@ -1,0 +1,30 @@
+{
+  "name": "CaviarNine",
+  "aliases": [],
+  "website": "https://caviarnine.com",
+  "infoUrl": "https://caviarnine.com/#tokens",
+  "description": "Our Caviar token was minted with an immutable supply of 999,999,999 tokens. We are airdropping CAVIAR to wallets based on their stake time at monthly intervals until our final staking airdrop in February 2023.\nBeing a CAVIAR holder means you will always be looked after by us. Be it new projects, airdrops, yield, funding, parties, merch etc... You have Caviar, you're part of the club!",
+  "shortDescription": "CaviarNine supports Radix",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/RaditXRD"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/CaviarNine"
+    },
+  ],
+  "tags": [
+    "defi",
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspv3xf6ds70mlf3eps3n8h2m7vd8mp9c93694ufv40tt6spad0dt2stamped",
+      "title": "",
+      "tags": [
+        "project"
+      ]
+    },
+  ],
+}
