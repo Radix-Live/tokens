@@ -6,6 +6,7 @@
   "scripts": {
     "gen-schema": "typescript-json-schema ./tsconfig.json Token --refs --aliasRefs --required --excludePrivate --out ./schemas/token.schema.json",
     "validate-tokens": "ts-node src/validate-tokens.ts",
+    "build-tokens": "ts-node src/build-tokens.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
