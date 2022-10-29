@@ -99,6 +99,13 @@
             "minLength": 1,
             "type": "string"
         },
+        "id": {
+            "description": "ID for the API. Unique across all tokens. First come, first served.\nStarts with a letter, should contain only letters, numbers and dashes.\nCan be the token symbol, short name, or something else associated with the project.\nThis is what people will see in the page URL: https://radix.live/tokens/<id>.",
+            "maxLength": 63,
+            "minLength": 3,
+            "pattern": "^[a-zA-Z][0-9a-zA-Z-]{2,}$",
+            "type": "string"
+        },
         "infoUrl": {
             "description": "Token info page URL (if available)",
             "format": "uri",
@@ -186,6 +193,7 @@
     },
     "required": [
         "description",
+        "id",
         "links",
         "name",
         "projectAccounts",

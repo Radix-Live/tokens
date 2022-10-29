@@ -4,6 +4,16 @@ import { Account } from "./Account";
 
 export class Token {
     /**
+     * ID for the API. Unique across all tokens. First come, first served.
+     * Starts with a letter, should contain only letters, numbers and dashes.
+     * Can be the token symbol, short name, or something else associated with the project.
+     * This is what people will see in the page URL: https://radix.live/tokens/<id>.
+     * @minLength 3
+     * @maxLength 63
+     * @pattern ^[a-zA-Z][0-9a-zA-Z-]{2,}$
+     */
+    id: string;
+    /**
      * Desired display name (full)
      * @minLength 1
      * @maxLength 63
@@ -66,9 +76,10 @@ export class Token {
      */
     projectAccounts: Account[];
 
-    constructor(name: string, shortName: string, aliases: string[], website: string, infoUrl: string,
+    constructor(id: string, name: string, shortName: string, aliases: string[], website: string, infoUrl: string,
                 description: string, shortDescription: string, links: Link[], tags: TokenTag[],
                 maxSupply: number, projectAccounts: Account[]) {
+        this.id = id;
         this.name = name;
         this.shortName = shortName;
         this.aliases = aliases;

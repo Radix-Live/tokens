@@ -1,4 +1,11 @@
 {
+  /*
+    ID for the API. Unique across all tokens. First come, first served.
+    Starts with a letter, should contain only letters, numbers and dashes.
+    Can be the token symbol, short name, or something else associated with the project.
+    This is what people will see in the page URL: https://radix.live/tokens/example
+  */
+  "id": "example",
   /* Desired display name (full) */
   "name": "Example Token",
   /* Short name, up to 18 characters (most emojis counts as 2 chars) */

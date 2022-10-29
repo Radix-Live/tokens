@@ -13,7 +13,7 @@ let failedTokens: string[] = [];
 for (const tokenRri of files) {
     if (!tokenRri.startsWith(".") && tokenRri.indexOf('_') > 1) {
         const tokenFile = readFileSync("resources/" + tokenRri + "/info.json5");
-        const errs = validator.validate(JSON5.parse(tokenFile.toString()));
+        const errs = validator.validate(tokenRri, JSON5.parse(tokenFile.toString()));
         if (errs.length) {
             failedTokens.push(tokenRri);
             console.error(tokenRri + " -> FAIL. Errors: \n" + errs.join("\n"));

@@ -4,6 +4,7 @@ import { Token } from "../model/Token";
 
 export class TokenValidator {
     private jsonSchema: Draft;
+    private seenIds: Record<string, string> = {};
 
     constructor() {
         const content = readFileSync("schemas/token.schema.json");
@@ -11,12 +12,12 @@ export class TokenValidator {
         this.jsonSchema = new Draft07(JSON.parse(schema));
     }
 
-    public validate(token: Token): string[] {
+    public validate(rri: string, token: Token): string[] {
         const errs: string[] = [];
 
         this.validateSchema(token, errs);
         if (!errs.length) {
-            this.validateData(token, errs);
+            this.validateData(rri, token, errs);
         }
 
         return errs;
@@ -32,7 +33,15 @@ export class TokenValidator {
         }
     }
 
-    private validateData(token: Token, errs: string[]): void {
+    private validateData(rri: string, token: Token, errs: string[]): void {
+        const id = token.id.toLowerCase();
+        const conflictingRRI = this.seenIds[id];
+        if (conflictingRRI) {
+            errs.push("ID is conflicting with: " + conflictingRRI);
+        } else {
+            this.seenIds[id] = rri;
+        }
+
         if (token.name.length > 18 && !token.shortName) {
             errs.push("Name is longer than 18 characters and no shortName provided");
         }
