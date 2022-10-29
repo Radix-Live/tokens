@@ -44,6 +44,9 @@ export class Token {
      * @maxLength 127
      */
     shortDescription?: string;
+    /**
+     * A list of links to socials
+     */
     links: Link[];
     /**
      * At least one tag required.

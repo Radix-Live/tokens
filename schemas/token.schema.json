@@ -105,6 +105,7 @@
             "type": "string"
         },
         "links": {
+            "description": "A list of links to socials",
             "items": {
                 "$ref": "#/definitions/Link"
             },
