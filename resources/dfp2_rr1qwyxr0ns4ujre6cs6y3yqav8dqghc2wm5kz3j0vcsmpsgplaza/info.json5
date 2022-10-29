@@ -1,0 +1,44 @@
+{
+  "id": "DFP2",
+  "name": "DefiPlaza",
+  "aliases": [
+    "DFP"
+  ],
+  "website": "https://defiplaza.net",
+  "infoUrl": "https://defiplaza.net/token/dfp2",
+  "description": "DefiPlaza Governance Token",
+  "shortDescription": "DefiPlaza Governance Token",
+  "links": [
+    {
+      "type": "telegram",
+      "url": "https://t.me/defiplaza"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/defiplaza"
+    },
+    {
+      "type": "discord",
+      "url": "https://defiplaza.net/discord"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/OmegaSyndicate"
+    },
+  ],
+  "tags": [
+    "governance",
+    "defi",
+    "dex"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qsp9uzvjwk7ycu0a60e380vejq07epn5psdr98an4qed85ylqn4fkeswplaza",
+      "title": "DFP2 Bridge",
+      "tags": [
+        "bridge"
+      ],
+      circulating: true
+    }
+  ],
+}
