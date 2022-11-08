@@ -2,18 +2,25 @@ import * as fs from "fs";
 import { readFileSync } from "fs";
 import JSON5 from "json5";
 import { TokenValidator } from "./json/TokenValidator";
+import Paths from "./util/Paths";
 
 const start = Date.now();
 
 const validator = new TokenValidator();
 
-let files = fs.readdirSync("resources");
+let files = fs.readdirSync(Paths.SOURCE);
 
 let failedTokens: string[] = [];
 for (const tokenRri of files) {
     if (!tokenRri.startsWith(".") && tokenRri.indexOf('_') > 1) {
-        const tokenFile = readFileSync("resources/" + tokenRri + "/info.json5");
+        const tokenFile = readFileSync(Paths.sourceJson(tokenRri));
         const errs = validator.validate(tokenRri, JSON5.parse(tokenFile.toString()));
+
+        if (!fs.existsSync(Paths.sourceSvg(tokenRri))
+            && !fs.existsSync(Paths.sourcePng(tokenRri))) {
+            errs.push("Logo icon is missing.");
+        }
+
         if (errs.length) {
             failedTokens.push(tokenRri);
             console.error(tokenRri + " -> FAIL. Errors: \n" + errs.join("\n"));
