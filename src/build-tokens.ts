@@ -3,8 +3,10 @@ import { readFileSync } from "fs";
 import JSON5 from "json5";
 import { TokenInfo } from "./model/model-out/TokenInfo";
 import Paths from "./util/Paths";
-import sharp from "sharp";
-import Config from "./util/Config";
+import IconsBuild from "./build/IconsBuild";
+import AccountsAccum from "./build/AccountsAccum";
+import { RRI } from "./model/model-out/Types";
+import Accounts from "./model/Accounts";
 
 const start = Date.now();
 
@@ -12,80 +14,39 @@ if (fs.existsSync(Paths.TARGET)) {
     fs.rmSync(Paths.TARGET, {recursive: true})
 }
 fs.mkdirSync(Paths.TARGET);
-let files = fs.readdirSync(Paths.SOURCE);
+fs.mkdirSync(Paths.TARGET_ACC_ICONS);
 
-let nonCirculatingAccounts: Record<string, string[]> = {};
 let allTokens: Record<string, TokenInfo> = {};
+let accAccum:AccountsAccum = new AccountsAccum();
 
-function copyIcons(tokenRri: string): boolean {
-    const resourceMap: Record<string, boolean> = {};
-    const tokenResources = fs.readdirSync(Paths.tokenSources(tokenRri));
-    for (const fileName of tokenResources) {
-        resourceMap[fileName] = true;
-    }
-    let hasSvg = resourceMap[Paths.SVG];
-    let hasPng = resourceMap[Paths.PNG];
-
-    if (!hasPng && !hasSvg) {
-        throw new Error("Missing both `" + Paths.SVG + "` and `" + Paths.PNG + "` for token " + tokenRri + "!");
-    }
-
-    fs.mkdirSync(Paths.targetIcons(tokenRri), {recursive: true});
-    if (hasSvg) {
-        fs.copyFileSync(Paths.sourceSvg(tokenRri), Paths.targetSvg(tokenRri));
-    }
-    const logoFile = hasPng ? Paths.sourcePng(tokenRri) : Paths.sourceSvg(tokenRri);
-    fs.open(logoFile, "r", async (err, fd) => {
-        if (err) throw err;
-
-        try {
-            const buff = fs.readFileSync(fd);
-            if (buff.length <= 1) {
-                throw new Error("Is the file empty? " + logoFile);
-            }
-            for (const dimension of Config.DIMENSIONS) {
-                const pngName = Paths.pngName(dimension);
-                const destFile = Paths.targetIcon(tokenRri, pngName);
-                if (resourceMap[pngName]) {
-                    fs.copyFileSync(Paths.sourceFile(tokenRri, pngName), destFile);
-                } else {
-                    let sh = sharp(buff);
-                    const meta = await sh.metadata();
-                    if (meta.width !== dimension || meta.height !== dimension) {
-                        sh = sh.resize({width: dimension, height: dimension, withoutEnlargement: true});
-                    }
-                    await sh
-                        .png({palette: true, effort: 10, compressionLevel: 9})
-                        // .withMetadata()
-                        .toFile(destFile);
-                }
-            }
-        } finally {
-            fs.close(fd, (err) => {
-                if (err) throw err;
-            });
-        }
-    });
-    return hasSvg;
-}
-
-for (const tokenRri of files) {
+for (const tokenRri of fs.readdirSync(Paths.SOURCE)) {
     if (!tokenRri.startsWith(".") && tokenRri.indexOf('_') > 1) {
         const tokenFile = readFileSync(Paths.sourceJson(tokenRri));
         const token: TokenInfo = JSON5.parse(tokenFile.toString());
 
-        const hasSvg = copyIcons(tokenRri);
+        const hasSvg = IconsBuild.buildTokenIcons(tokenRri);
         token.hasSvg = hasSvg;
 
-        nonCirculatingAccounts[tokenRri] = token.projectAccounts
-            .filter(acc => !acc.circulating)
-            .map(acc => acc.address);
+        accAccum.addAccounts(tokenRri as RRI, token);
 
         allTokens[tokenRri] = token;
     }
 }
+const allLogos = IconsBuild.getResources(Paths.ACC_LOGOS);
+for (const fileName of fs.readdirSync(Paths.ACC_INFO)) {
+    if (!fileName.startsWith(".")) {
+        const accountsFile = readFileSync(Paths.ACC_INFO + "/" + fileName);
+        const accounts: Accounts = JSON5.parse(accountsFile.toString());
 
-fs.writeFileSync(Paths.TARGET + "non-circulating-accounts.json", JSON.stringify(nonCirculatingAccounts));
+        IconsBuild.buildAccountIcons(accounts.logo, allLogos);
+
+        accAccum.addInfo(fileName, accounts);
+    }
+}
+
 fs.writeFileSync(Paths.TARGET + "tokens.json", JSON.stringify(allTokens));
+fs.writeFileSync(Paths.TARGET + "non-circulating-accounts.json", JSON.stringify(accAccum.getNonCirculating()));
+fs.writeFileSync(Paths.TARGET + "accounts.json", JSON.stringify(accAccum.getAccounts()));
+fs.writeFileSync(Paths.TARGET + "common-accounts.json", JSON.stringify(accAccum.getCommonAccounts()));
 
 console.log("Finished in: " + (Date.now() - start) / 1000 + "s");

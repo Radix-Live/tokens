@@ -1,6 +1,6 @@
 import { AccountTag } from "./AccountTag";
 
-export class Account {
+export class TokenAccount {
     /**
      * @pattern ^rdx1[02-9ac-hj-np-z]{54}[cgqs][02-9ac-hj-np-z]{6}$
      */

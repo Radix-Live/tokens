@@ -1,4 +1,4 @@
-export enum AccountTagEnum {
+export enum TokenAccountTagEnum {
     /**
      * Radix Foundation
      */
@@ -29,4 +29,4 @@ export enum AccountTagEnum {
     other,
 }
 
-export declare type AccountTag = keyof typeof AccountTagEnum;
+export declare type AccountTag = keyof typeof TokenAccountTagEnum;

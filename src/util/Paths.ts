@@ -1,6 +1,10 @@
 export default class Paths {
     static SOURCE = "resources/";
+    static ACC_INFO = "accounts/info";
+    static ACC_LOGOS = "accounts/logos";
+
     static TARGET = "generated/";
+    static TARGET_ACC_ICONS = this.TARGET + "account-icons/";
 
     static JSON = "info.json5";
     static SVG = "logo.svg";
@@ -26,6 +30,7 @@ export default class Paths {
         return this.sourceFile(tokenRri, this.SVG);
     }
 
+
     static targetIcons(tokenRri: string): string {
         return this.TARGET + "icons/" + tokenRri;
     }
@@ -41,5 +46,6 @@ export default class Paths {
     static pngName(dimension: number): string {
         return "logo-x" + dimension + ".png";
     }
+
 
 }

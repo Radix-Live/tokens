@@ -1,6 +1,6 @@
 import { Link } from "./Link";
 import { TokenTag } from "./TokenTag";
-import { Account } from "./Account";
+import { TokenAccount } from "./TokenAccount";
 
 export class Token {
     /**
@@ -74,11 +74,11 @@ export class Token {
      * Required for circulating supply calculation, but other accounts can be also mentioned here (e.g. CeDEX accounts).
      * By default, they are considered non-circulating - add `circulating: true` to avoid this.
      */
-    projectAccounts: Account[];
+    projectAccounts: TokenAccount[];
 
     constructor(id: string, name: string, shortName: string, aliases: string[], website: string, infoUrl: string,
                 description: string, shortDescription: string, links: Link[], tags: TokenTag[],
-                maxSupply: number, projectAccounts: Account[]) {
+                maxSupply: number, projectAccounts: TokenAccount[]) {
         this.id = id;
         this.name = name;
         this.shortName = shortName;

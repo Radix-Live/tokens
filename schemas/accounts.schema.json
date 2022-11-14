@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "AddressWithTitle": {
+            "patternProperties": {
+                "^(?!.*(rdx1[02-9ac-hj-np-z]{54}[cgqs][02-9ac-hj-np-z]{6})).+$": {
+                    "type": "string",
+                    "pattern": "Property Key should be an address!"
+                },
+                "^rdx1[02-9ac-hj-np-z]{54}[cgqs][02-9ac-hj-np-z]{6}$": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 63
+                }
+            },
+            "minProperties": 1,
+            "type": "object"
+        }
+    },
+    "description": "Schema for the Accounts info file.\nEither title (for a single account file) or addresses (for a multiple accounts file) is required.",
+    "properties": {
+        "addresses": {
+            "$ref": "#/definitions/AddressWithTitle",
+            "description": "<address, title>.",
+            "pattern": "^rdx1[02-9ac-hj-np-z]{54}[cgqs][02-9ac-hj-np-z]{6}$"
+        },
+        "logo": {
+            "description": "Logo icon including extension (SVG or PNG). PNG will be downsized if needed.",
+            "type": "string"
+        },
+        "tags": {
+            "description": "Account tags.",
+            "items": {
+                "enum": [
+                    "bridge",
+                    "exchange",
+                    "foundation",
+                    "other",
+                    "project",
+                    "team",
+                    "treasury"
+                ],
+                "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
+        },
+        "title": {
+            "description": "Title",
+            "type": "string"
+        }
+    },
+    "required": [
+        "logo",
+        "tags"
+    ],
+    "type": "object"
+}
+

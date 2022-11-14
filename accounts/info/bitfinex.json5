@@ -1,0 +1,9 @@
+{
+  addresses: {
+    "rdx1qspsgtz8wxzhs7h3m5dxz4uw0a350qp567zz4v9xgamcag8kavsxvpctcgge2": "Bitfinex",
+  },
+  logo: "bitfinex.svg",
+  tags: [
+    "exchange"
+  ]
+}
