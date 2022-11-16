@@ -7,8 +7,9 @@ export default class Paths {
     static TARGET_ACC_ICONS = this.TARGET + "account-icons/";
 
     static JSON = "info.json5";
-    static SVG = "logo.svg";
-    static PNG = "logo.png";
+    static LOGO = "logo";
+    static SVG = this.LOGO + ".svg";
+    static PNG = this.LOGO + ".png";
 
     static tokenSources(tokenRri: string): string {
         return this.SOURCE + tokenRri;
@@ -30,22 +31,8 @@ export default class Paths {
         return this.sourceFile(tokenRri, this.SVG);
     }
 
-
     static targetIcons(tokenRri: string): string {
         return this.TARGET + "icons/" + tokenRri;
     }
-
-    static targetIcon(tokenRri: string, name: string): string {
-        return this.targetIcons(tokenRri) + "/" + name;
-    }
-
-    static targetSvg(tokenRri: string): string {
-        return this.targetIcon(tokenRri, this.SVG);
-    }
-
-    static pngName(dimension: number): string {
-        return "logo-x" + dimension + ".png";
-    }
-
 
 }

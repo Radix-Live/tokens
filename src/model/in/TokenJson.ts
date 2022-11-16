@@ -1,8 +1,11 @@
-import { Link } from "./Link";
-import { TokenTag } from "./TokenTag";
-import { TokenAccount } from "./TokenAccount";
+import { Link } from "../common/Link";
+import { TokenTag } from "../common/TokenTag";
+import { TokenAccount } from "../common/TokenAccount";
 
-export class Token {
+/**
+ * Schema for the Token info file.
+ */
+export class TokenJson {
     /**
      * ID for the API. Unique across all tokens. First come, first served.
      * Starts with a letter, should contain only letters, numbers and dashes.

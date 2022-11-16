@@ -4,7 +4,7 @@
   "description": "Additional information about tokens on Radix, such as contacts, logos, team/lockup addresses.",
   "main": "index.js",
   "scripts": {
-    "gen-schema": "(typescript-json-schema ./tsconfig.json Token --refs --aliasRefs --required --excludePrivate --out ./schemas/token.schema.json) && (typescript-json-schema ./tsconfig.json Accounts --refs --aliasRefs --required --excludePrivate --out ./schemas/accounts.schema.json)",
+    "gen-schema": "(typescript-json-schema ./tsconfig.json TokenJson --refs --aliasRefs --required --excludePrivate --out ./schemas/token.schema.json) && (typescript-json-schema ./tsconfig.json AccountsJson --refs --aliasRefs --required --excludePrivate --out ./schemas/accounts.schema.json)",
     "validate-tokens": "ts-node src/validate-tokens.ts",
     "build-tokens": "ts-node src/build-tokens.ts",
     "test": "echo \"Error: no test specified\" && exit 1"

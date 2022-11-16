@@ -84,6 +84,7 @@
             "type": "object"
         }
     },
+    "description": "Schema for the Token info file.",
     "properties": {
         "aliases": {
             "description": "Aliases for search (optional)",

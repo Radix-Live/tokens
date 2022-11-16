@@ -1,9 +1,9 @@
-import { Token } from "../Token";
-import { Link } from "../Link";
-import { TokenTag } from "../TokenTag";
-import { TokenAccount } from "../TokenAccount";
+import { TokenAccount } from "../common/TokenAccount";
+import { Link } from "../common/Link";
+import { TokenTag } from "../common/TokenTag";
+import { TokenJson } from "../in/TokenJson";
 
-export class TokenInfo extends Token {
+export class TokenInfo extends TokenJson {
     hasSvg: boolean;
 
     constructor(id: string, name: string, shortName: string, aliases: string[], website: string, infoUrl: string, description: string,

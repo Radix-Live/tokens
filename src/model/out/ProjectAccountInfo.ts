@@ -1,6 +1,6 @@
-import { AccountTag } from "../AccountTag";
+import { AccountTag } from "../common/AccountTag";
 
-export default class AccountInfo {
+export default class ProjectAccountInfo {
     title?: string;
     tags: AccountTag[];
     circulating?: boolean;

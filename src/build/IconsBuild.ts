@@ -17,21 +17,19 @@ export default class IconsBuild {
         fs.mkdirSync(Paths.targetIcons(tokenRri), {recursive: true});
         const logoFile = hasPng ? Paths.PNG : Paths.SVG;
 
-        this.transformIcon(Paths.SOURCE + tokenRri, logoFile, Config.DIMENSIONS_TOKEN,
-            Paths.targetIcons(tokenRri), Paths.pngName, resourceMap);
+        this.transformIcon(Paths.SOURCE + tokenRri, logoFile, Config.DIMENSIONS_TOKEN, Paths.targetIcons(tokenRri), resourceMap);
 
         return !!hasSvg;
     }
 
     static buildAccountIcons(logoFile: string, resourceMap: Record<string, boolean | undefined>): void {
-        const filePrefix = logoFile.substring(0, logoFile.length - 4);
 
-        this.transformIcon(Paths.ACC_LOGOS, logoFile, Config.DIMENSIONS_ACCOUNT,
-            Paths.TARGET_ACC_ICONS, (dimension) => filePrefix + "-x" + dimension + ".png", resourceMap);
+
+        this.transformIcon(Paths.ACC_LOGOS, logoFile, Config.DIMENSIONS_ACCOUNT, Paths.TARGET_ACC_ICONS, resourceMap);
     }
 
     private static transformIcon(sourceDir: string, logoFile: string, dimensions: number[], targetDir: string,
-                                 nameFunc: (dimension: number) => string, resourceMap: Record<string, boolean | undefined>): void {
+                                 resourceMap: Record<string, boolean | undefined>): void {
         const logoFullPath = sourceDir + "/" + logoFile;
         if (logoFile.endsWith(".svg")) {
             fs.copyFileSync(logoFullPath, targetDir + "/" + logoFile);
@@ -45,7 +43,8 @@ export default class IconsBuild {
                     throw new Error("Is the file empty? " + logoFullPath);
                 }
                 for (const dimension of dimensions) {
-                    const pngName = nameFunc(dimension);
+                    const filePrefix = logoFile.substring(0, logoFile.length - 4);
+                    const pngName = filePrefix + "-x" + dimension + ".png";
                     const destFile = targetDir + "/" + pngName;
                     if (resourceMap[pngName]) {
                         fs.copyFileSync(sourceDir + "/" + pngName, destFile);

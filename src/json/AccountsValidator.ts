@@ -1,8 +1,9 @@
 import { Draft, Draft07, JSONError } from "json-schema-library";
 import fs, { readFileSync } from "fs";
-import Accounts from "../model/Accounts";
+import AccountsJson from "../model/in/AccountsJson";
 import Strings from "../util/Strings";
 import Paths from "../util/Paths";
+import Config from "../util/Config";
 
 export class AccountsValidator {
     private jsonSchema: Draft;
@@ -18,7 +19,7 @@ export class AccountsValidator {
         }
     }
 
-    public validate(fileName: string, accounts: Accounts): string[] {
+    public validate(fileName: string, accounts: AccountsJson): string[] {
         const errs: string[] = [];
 
         this.validateSchema(accounts, errs);
@@ -33,13 +34,26 @@ export class AccountsValidator {
         const unused: string[] = [];
         for (const logo in this.availableLogos) {
             if (this.availableLogos[logo] === 0) {
+                if (logo.endsWith(".png")) {
+                    const prefixEnd = logo.indexOf("-x");
+                    if (prefixEnd > 0) {
+                        const dimension = logo.substring(prefixEnd + 2, logo.length - 4);
+                        const mainLogo = logo.substring(0, prefixEnd);
+                        if (Config.DIMENSIONS_ACCOUNT.indexOf(Number(dimension)) > -1
+                            && (this.availableLogos[mainLogo + ".png"] || this.availableLogos[mainLogo + ".svg"])) {
+                            // do not add to unused.
+                            continue;
+                        }
+                    }
+                }
+
                 unused.push(logo);
             }
         }
         return unused;
     }
 
-    private validateSchema(accounts: Accounts, errs: string[]): void {
+    private validateSchema(accounts: AccountsJson, errs: string[]): void {
         const errors: JSONError[] = this.jsonSchema.validate(accounts);
 
         if (errors.length) {
@@ -49,7 +63,7 @@ export class AccountsValidator {
         }
     }
 
-    private validateData(fileName: string, accounts: Accounts, errs: string[]): void {
+    private validateData(fileName: string, accounts: AccountsJson, errs: string[]): void {
         const singleAcc = !!accounts.title;
         const multiAcc = !!accounts.addresses;
         if (singleAcc && multiAcc) {

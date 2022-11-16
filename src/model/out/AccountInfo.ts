@@ -1,6 +1,6 @@
-import { AccountTag } from "../AccountTag";
+import { AccountTag } from "../common/AccountTag";
 
-export default class CommonAccountInfo {
+export default class AccountInfo {
     title: string;
     logo: string;
     tags: AccountTag[];

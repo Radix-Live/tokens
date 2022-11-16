@@ -1,6 +1,6 @@
 import { Draft, Draft07, JSONError } from "json-schema-library";
 import { readFileSync } from "fs";
-import { Token } from "../model/Token";
+import { TokenJson } from "../model/in/TokenJson";
 
 export class TokenValidator {
     private jsonSchema: Draft;
@@ -12,7 +12,7 @@ export class TokenValidator {
         this.jsonSchema = new Draft07(JSON.parse(schema));
     }
 
-    public validate(rri: string, token: Token): string[] {
+    public validate(rri: string, token: TokenJson): string[] {
         const errs: string[] = [];
 
         this.validateSchema(token, errs);
@@ -23,7 +23,7 @@ export class TokenValidator {
         return errs;
     }
 
-    private validateSchema(token: Token, errs: string[]): void {
+    private validateSchema(token: TokenJson, errs: string[]): void {
         const errors: JSONError[] = this.jsonSchema.validate(token);
 
         if (errors.length) {
@@ -33,7 +33,7 @@ export class TokenValidator {
         }
     }
 
-    private validateData(rri: string, token: Token, errs: string[]): void {
+    private validateData(rri: string, token: TokenJson, errs: string[]): void {
         const id = token.id.toLowerCase();
         const conflictingRRI = this.seenIds[id];
         if (conflictingRRI) {

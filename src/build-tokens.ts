@@ -1,12 +1,12 @@
 import * as fs from "fs";
 import { readFileSync } from "fs";
 import JSON5 from "json5";
-import { TokenInfo } from "./model/model-out/TokenInfo";
+import { TokenInfo } from "./model/out/TokenInfo";
 import Paths from "./util/Paths";
 import IconsBuild from "./build/IconsBuild";
 import AccountsAccum from "./build/AccountsAccum";
-import { RRI } from "./model/model-out/Types";
-import Accounts from "./model/Accounts";
+import AccountsJson from "./model/in/AccountsJson";
+import { RRI } from "./model/common/Types";
 
 const start = Date.now();
 
@@ -36,7 +36,7 @@ const allLogos = IconsBuild.getResources(Paths.ACC_LOGOS);
 for (const fileName of fs.readdirSync(Paths.ACC_INFO)) {
     if (!fileName.startsWith(".")) {
         const accountsFile = readFileSync(Paths.ACC_INFO + "/" + fileName);
-        const accounts: Accounts = JSON5.parse(accountsFile.toString());
+        const accounts: AccountsJson = JSON5.parse(accountsFile.toString());
 
         IconsBuild.buildAccountIcons(accounts.logo, allLogos);
 

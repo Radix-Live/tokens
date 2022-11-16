@@ -1,18 +1,11 @@
-import { AccountTag } from "./AccountTag";
-
-export declare type AddressWithTitle = {
-    /**
-     * <address, title>.
-     * @patternProperties ^rdx1[02-9ac-hj-np-z]{54}[cgqs][02-9ac-hj-np-z]{6}$
-     */
-    [key: string]: string;
-};
+import { AddressWithTitle } from "../common/Types";
+import { AccountTag } from "../common/AccountTag";
 
 /**
  * Schema for the Accounts info file.
  * Either title (for a single account file) or addresses (for a multiple accounts file) is required.
  */
-export default class Accounts {
+export default class AccountsJson {
     /**
      * Title
      */
