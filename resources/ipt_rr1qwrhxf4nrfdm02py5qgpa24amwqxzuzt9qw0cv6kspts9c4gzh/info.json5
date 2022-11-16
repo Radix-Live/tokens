@@ -1,0 +1,58 @@
+{
+  "id": "IPT",
+  "name": "Impahla",
+  "aliases": [
+    "IMA"
+  ],
+  "website": "https://www.impahla.io/",
+  "infoUrl": "https://medium.com/@impahla/impahla-tokenomics-95d879028bfe",
+  "description": "IPT token will be swapped 1:1 with actual Impahla token post Babylon.",
+  "links": [
+    {
+      "type": "telegram",
+      "title": "Announcements",
+      "url": "https://t.me/Radstart"
+    },
+    {
+      "type": "discord",
+      "url": "https://discord.gg/xtEwrfXB"
+    },
+    {
+      "type": "telegram",
+      "title": "Community",
+      "url": "https://t.me/Impahla"
+    },
+    {
+      "type": "reddit",
+      "url": "https://www.reddit.com/r/impahla/"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/impahla_dao"
+    },
+    {
+      "type": "medium",
+      "url": "https://medium.com/@impahla"
+    },
+  ],
+  "tags": [
+    "governance",
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspeml7l7skv4f34egaqa5xj8vkc85u9v47jgzk0qu6a2d06899v44qyvtyxn",
+      "title": "#1",
+      "tags": [
+        "project"
+      ],
+    },
+    {
+      "address": "rdx1qsplc2v0g28khyt3s7yzfdg4wg8gxv0vwr0gcldq6k7azgut4pcstesyagme0",
+      "title": "Airdropper",
+      "tags": [
+        "project"
+      ],
+    }
+  ],
+  "maxSupply": 200000000
+}
