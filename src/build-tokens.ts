@@ -7,8 +7,11 @@ import IconsBuild from "./build/IconsBuild";
 import AccountsAccum from "./build/AccountsAccum";
 import AccountsJson from "./model/in/AccountsJson";
 import { RRI } from "./model/common/Types";
+import AccountsBundle from "./model/out/AccountsBundle";
 
 const start = Date.now();
+
+const serialize = <T>(o: T): string => JSON.stringify(o);
 
 if (fs.existsSync(Paths.TARGET)) {
     fs.rmSync(Paths.TARGET, {recursive: true})
@@ -17,17 +20,16 @@ fs.mkdirSync(Paths.TARGET);
 fs.mkdirSync(Paths.TARGET_ACC_ICONS);
 
 let allTokens: Record<string, TokenInfo> = {};
-let accAccum:AccountsAccum = new AccountsAccum();
+let accAccum: AccountsAccum = new AccountsAccum();
 
 for (const tokenRri of fs.readdirSync(Paths.SOURCE)) {
     if (!tokenRri.startsWith(".") && tokenRri.indexOf('_') > 1) {
         const tokenFile = readFileSync(Paths.sourceJson(tokenRri));
         const token: TokenInfo = JSON5.parse(tokenFile.toString());
 
-        const hasSvg = IconsBuild.buildTokenIcons(tokenRri);
-        token.hasSvg = hasSvg;
+        token.hasSvg = IconsBuild.buildTokenIcons(tokenRri);
 
-        accAccum.addAccounts(tokenRri as RRI, token);
+        accAccum.addProjectAccounts(tokenRri as RRI, token);
 
         allTokens[tokenRri] = token;
     }
@@ -44,9 +46,12 @@ for (const fileName of fs.readdirSync(Paths.ACC_INFO)) {
     }
 }
 
-fs.writeFileSync(Paths.TARGET + "tokens.json", JSON.stringify(allTokens));
-fs.writeFileSync(Paths.TARGET + "non-circulating-accounts.json", JSON.stringify(accAccum.getNonCirculating()));
-fs.writeFileSync(Paths.TARGET + "accounts.json", JSON.stringify(accAccum.getAccounts()));
-fs.writeFileSync(Paths.TARGET + "common-accounts.json", JSON.stringify(accAccum.getCommonAccounts()));
+fs.writeFileSync(Paths.TARGET + "tokens.json", serialize(allTokens));
+// fs.writeFileSync(Paths.TARGET + "common-accounts.json", serialize(accAccum.getCommonAccounts()));
+// fs.writeFileSync(Paths.TARGET + "project-accounts.json", serialize(accAccum.getProjectAccounts()));
+fs.writeFileSync(Paths.TARGET + "non-circulating-accounts.json", serialize(accAccum.getNonCirculating()));
+fs.writeFileSync(Paths.TARGET + "accounts.json", serialize(new AccountsBundle(
+    accAccum.getCommonAccounts(), accAccum.getProjectAccounts()
+)));
 
 console.log("Finished in: " + (Date.now() - start) / 1000 + "s");

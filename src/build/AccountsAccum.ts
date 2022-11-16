@@ -5,8 +5,8 @@ import AccountInfo from "../model/out/AccountInfo";
 import { Address, RRI } from "../model/common/Types";
 
 export default class AccountsAccum {
-    private accounts: Record<Address, Record<RRI, ProjectAccountInfo>> = {};
     private commonAccounts: Record<Address, AccountInfo> = {};
+    private projectAccounts: Record<Address, Record<RRI, ProjectAccountInfo>> = {};
     private nonCirculating: Record<RRI, Address[]> = {};
 
     addInfo(fileName: string, accounts: AccountsJson): void {
@@ -23,10 +23,10 @@ export default class AccountsAccum {
         }
     }
 
-    addAccounts(tokenRri: RRI, token: TokenInfo): void {
+    addProjectAccounts(tokenRri: RRI, token: TokenInfo): void {
         for (const account of token.projectAccounts) {
             const info = new ProjectAccountInfo(account.tags, account.title, account.circulating);
-            this.addAccount(account.address as Address, tokenRri, info);
+            this.addProjectAccount(account.address as Address, tokenRri, info);
         }
 
         this.nonCirculating[tokenRri] = token.projectAccounts
@@ -34,18 +34,18 @@ export default class AccountsAccum {
             .map(acc => acc.address);
     }
 
-    private addAccount(addr: Address, tokenRri: RRI, info: ProjectAccountInfo): void {
-        let accContext: Record<RRI, ProjectAccountInfo> = this.accounts[addr];
+    private addProjectAccount(addr: Address, tokenRri: RRI, info: ProjectAccountInfo): void {
+        let accContext: Record<RRI, ProjectAccountInfo> = this.projectAccounts[addr];
         if (!accContext) {
             accContext = {};
-            this.accounts[addr] = accContext;
+            this.projectAccounts[addr] = accContext;
         }
 
         accContext[tokenRri] = info;
     }
 
-    getAccounts(): Record<Address, Record<RRI, ProjectAccountInfo>> {
-        return this.accounts;
+    getProjectAccounts(): Record<Address, Record<RRI, ProjectAccountInfo>> {
+        return this.projectAccounts;
     }
 
     getCommonAccounts(): Record<Address, AccountInfo> {
