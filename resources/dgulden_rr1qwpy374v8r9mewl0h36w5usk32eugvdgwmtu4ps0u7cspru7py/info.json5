@@ -1,0 +1,73 @@
+{
+  "id": "DigiGulden",
+  "name": "DigiGulden",
+  "aliases": [],
+  "website": "https://digigulden.nl/",
+  "infoUrl": "https://digigulden.nl/en/figures-technology/",
+  "description": "The digital currency to use in your daily life",
+  "shortDescription": "The digital currency to use in your daily life",
+  "links": [
+    {
+      "type": "telegram",
+      "title": "Dutch Channel",
+      "url": "https://t.me/DigiGulden"
+    },
+    {
+      "type": "telegram",
+      "title": "English Channel",
+      "url": "https://t.me/DigiGuldenENGLISH"
+    },
+    {
+      "type": "twitter",
+      "url": "https://twitter.com/DigiGulden"
+    },
+    {
+      "type": "instagram",
+      "url": "https://www.instagram.com/digigulden/"
+    },
+    {
+      "type": "facebook",
+      "url": "https://www.facebook.com/DigiGulden-102499272466490"
+    },
+  ],
+  "tags": [
+    "currency"
+  ],
+  "projectAccounts": [
+    {
+      "address": "rdx1qspuhm7vk7d9kuxnrr60gm208zuy4g5ull39cp2wg47q7tnhxnhgalcun2hev",
+      "title": "#1",
+      "tags": [
+        "project"
+      ],
+    },
+    {
+      "address": "rdx1qsp5qkr5pypzu0suzsaa6xrs2s0323d23kqnark3r4ayzqflwmjj5gg7vvtn8",
+      "title": "Tranche 1",
+      "tags": [
+        "project"
+      ],
+    },
+    {
+      "address": "rdx1qsp9dkn649h7j3u7aah3lwlwm87jcaaxrf44lmxn75h26l0pazvh73qsv8nv6",
+      "title": "Founders",
+      "tags": [
+        "team"
+      ],
+    },
+    {
+      "address": "rdx1qsp9jqq57f5qcxaea3mejc5vdze8tvxz0am0eh7e4ser8vw2t6vmnggvhqhw0",
+      "title": "Staking Reserve",
+      "tags": [
+        "treasury"
+      ],
+    },
+    {
+      "address": "rdx1qsp7fn4j7qee2q9mgeksuk5mg9m4c05vxql66sz2d8030sssy0epvvc7fpfdr",
+      "title": "Marketing",
+      "tags": [
+        "project"
+      ],
+    }
+  ],
+}

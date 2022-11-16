@@ -3,6 +3,7 @@ export enum TokenTagEnum {
     "Layer 2",
     analytics,
     cex,
+    currency,
     defi,
     dex,
     fan,
