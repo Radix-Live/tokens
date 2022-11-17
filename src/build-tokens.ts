@@ -27,6 +27,11 @@ for (const tokenRri of fs.readdirSync(Paths.SOURCE)) {
         const tokenFile = readFileSync(Paths.sourceJson(tokenRri));
         const token: TokenInfo = JSON5.parse(tokenFile.toString());
 
+        // correct optional fields:
+        if (!token.aliases) {
+            token.aliases = [];
+        }
+
         token.hasSvg = IconsBuild.buildTokenIcons(tokenRri);
 
         accAccum.addProjectAccounts(tokenRri as RRI, token);
