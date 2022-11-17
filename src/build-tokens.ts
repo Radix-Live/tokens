@@ -11,7 +11,10 @@ import AccountsBundle from "./model/out/AccountsBundle";
 
 const start = Date.now();
 
-const serialize = <T>(o: T): string => JSON.stringify(o);
+const storeJson = <T>(name: string, o: T): void => {
+    // noinspection TypeScriptValidateJSTypes
+    fs.writeFileSync(Paths.TARGET + name + ".json", JSON.stringify(o, undefined, 2));
+};
 
 if (fs.existsSync(Paths.TARGET)) {
     fs.rmSync(Paths.TARGET, {recursive: true})
@@ -51,12 +54,10 @@ for (const fileName of fs.readdirSync(Paths.ACC_INFO)) {
     }
 }
 
-fs.writeFileSync(Paths.TARGET + "tokens.json", serialize(allTokens));
-// fs.writeFileSync(Paths.TARGET + "common-accounts.json", serialize(accAccum.getCommonAccounts()));
-// fs.writeFileSync(Paths.TARGET + "project-accounts.json", serialize(accAccum.getProjectAccounts()));
-fs.writeFileSync(Paths.TARGET + "non-circulating-accounts.json", serialize(accAccum.getNonCirculating()));
-fs.writeFileSync(Paths.TARGET + "accounts.json", serialize(new AccountsBundle(
+storeJson("tokens", allTokens);
+storeJson("non-circulating-accounts", accAccum.getNonCirculating());
+storeJson("accounts", new AccountsBundle(
     accAccum.getCommonAccounts(), accAccum.getProjectAccounts()
-)));
+));
 
 console.log("Finished in: " + (Date.now() - start) / 1000 + "s");
