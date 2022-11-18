@@ -25,7 +25,7 @@ export default class AccountsAccum {
 
     addProjectAccounts(tokenRri: RRI, token: TokenInfo): void {
         for (const account of token.projectAccounts) {
-            const info = new ProjectAccountInfo(account.tags, account.title, account.circulating);
+            const info = new ProjectAccountInfo(account.tags, account.title, token.hasSvg);
             this.addProjectAccount(account.address as Address, tokenRri, info);
         }
 

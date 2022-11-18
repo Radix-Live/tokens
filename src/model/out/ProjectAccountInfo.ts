@@ -1,14 +1,14 @@
 import { AccountTag } from "../common/AccountTag";
 
 export default class ProjectAccountInfo {
-    title?: string;
+    title: string;
     tags: AccountTag[];
-    circulating?: boolean;
+    svg?: boolean;
 
 
-    constructor(tags: AccountTag[], title?: string, circulating?: boolean) {
+    constructor(tags: AccountTag[], title: string, svg?: boolean) {
         this.title = title;
         this.tags = tags;
-        this.circulating = circulating;
+        this.svg = svg;
     }
 }

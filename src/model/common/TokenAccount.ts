@@ -8,7 +8,7 @@ export class TokenAccount {
     /**
      * Title
      */
-    title?: string;
+    title: string;
     /**
      * At least one tag is required for non-circulating accounts.
      * @uniqueItems true

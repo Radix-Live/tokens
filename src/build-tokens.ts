@@ -35,7 +35,7 @@ for (const tokenRri of fs.readdirSync(Paths.SOURCE)) {
             token.aliases = [];
         }
 
-        token.hasSvg = IconsBuild.buildTokenIcons(tokenRri);
+        token.hasSvg = IconsBuild.buildTokenIcons(tokenRri) || undefined;
 
         accAccum.addProjectAccounts(tokenRri as RRI, token);
 

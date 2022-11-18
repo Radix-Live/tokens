@@ -79,7 +79,8 @@
             },
             "required": [
                 "address",
-                "tags"
+                "tags",
+                "title"
             ],
             "type": "object"
         }
