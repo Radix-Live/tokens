@@ -23,13 +23,5 @@
   "tags": [
     "nft",
   ],
-  "projectAccounts": [
-    {
-      "address": "rdx1qspwy8ylazhuwa6tc97qc773g0tkmpm43gjh8zjfw5ys0f0a4w0euaqj8l9q3",
-      "title": "Nerds Republic ?",
-      "tags": [
-        "project"
-      ]
-    }
-  ],
+  "projectAccounts": [],
 }
